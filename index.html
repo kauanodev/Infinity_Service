@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity CE</title>
+  </head>
+  <body>
+    <header>
+      <span>logo</span>
+    </header>
+
+    <div id="form">
+      <h1>DADOS DO CHAMADO CEC - ABERTURA</h1>
+      <form>
+        <p>
+          <label for="technician">Técnico:</label>
+          <input
+            type="text"
+            name="technician"
+            id="technician"
+            placeholder="Escreva seu nome aqui"
+            required="required"
+          />
+        </p>
+        <p>
+          <label for="client">Cliente:</label>
+          <input
+            type="text"
+            name="client"
+            id="client"
+            placeholder="Escreva o nome do cliente aqui"
+            required="required"
+          />
+        </p>
+        <p>
+          <label for="serviceNum">Número do Chamado:</label>
+          <input
+            type="number"
+            maxlength="10"
+            name="serviceNum"
+            id="serviceNum"
+            required="required"
+          />
+        </p>
+        <p>
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" />
+        </p>
+        <p>
+          <label for="date">Data:</label>
+          <input type="date" name="date" id="date" />
+        </p>
+        <p>
+          <label for="code">Código:</label>
+          <input type="text" name="code" id="code" />
+        </p>
+        <p>
+          <label for="description">Descrição da Peça:</label>
+          <input type="text" name="description" id="description" />
+        </p>
+        <p>
+          <label for="reason">Motivo da Troca:</label>
+          <input type="text" name="reason" id="reason" />
+        </p>
+        <p>
+          <label for="department">Departmento:</label>
+          <input type="text" name="department" id="department" />
+        </p>
+        <p>
+          <label for="model">Modelo:</label>
+          <input type="text" name="model" id="model" />
+        </p>
+        <p>
+          <label for="tag">Etiqueta:</label>
+          <input type="number" name="tag" id="tag" />
+        </p>
+        <p>
+          <label for="monoPages">Páginas Mono:</label>
+          <input type="number" name="monoPages" id="monoPages" />
+        </p>
+        <p>
+          <label for="colorPages">Páginas Coloridas:</label>
+          <input type="number" name="colorPages" id="colorPages" />
+        </p>
+        <p>
+          <label for="totalPages">Total de Páginas:</label>
+          <input type="number" name="totalPages" id="totalPages" />
+        </p>
+        <p>
+          <label for="procedure">Procedimento:</label>
+          <textarea name="procedure" id="procedure"></textarea>
+        </p>
+        <p>
+          <label>Testes Realizados?</label><br />
+          <input
+            type="radio"
+            name="testsPerformed"
+            id="testsPerformedYes"
+            value="yes"
+          />
+          <label for="testsPerformedYes">Yes</label><br />
+          <input
+            type="radio"
+            name="testsPerformed"
+            id="testsPerformedNo"
+            value="no"
+          />
+          <label for="testsPerformedNo">No</label>
+        </p>
+        <p>
+          <label>Cliente acompanhou?</label><br />
+          <input
+            type="radio"
+            name="clientAccompanied"
+            id="clientAccompaniedYes"
+            value="yes"
+          />
+          <label for="clientAccompaniedYes">Yes</label><br />
+          <input
+            type="radio"
+            name="clientAccompanied"
+            id="clientAccompaniedNo"
+            value="no"
+          />
+          <label for="clientAccompaniedNo">No</label>
+        </p>
+        <p>
+          <label>Equipamento apto para uso?</label><br />
+          <input
+            type="radio"
+            name="equipmentReady"
+            id="equipmentReadyYes"
+            value="yes"
+          />
+          <label for="equipmentReadyYes">Yes</label><br />
+          <input
+            type="radio"
+            name="equipmentReady"
+            id="equipmentReadyNo"
+            value="no"
+          />
+          <label for="equipmentReadyNo">No</label>
+        </p>
+
+        <div id="divSignatureTechnician">
+          <label>Assinatura do Técnico:</label><br />
+          <canvas
+            id="canvasTechnician"
+            style="background: rgb(224, 224, 224)"
+          ></canvas>
+          <button id="clearTechnician" type="button">Limpar</button>
+        </div>
+        
+        <div id="divSignatureClient">
+          <label>Assinatura do Cliente:</label><br />
+          <canvas
+            id="canvasClient"
+            style="background: rgb(224, 224, 224)"
+          ></canvas>
+          <button id="clearClient" type="button">Limpar</button>
+        </div>
+
+        <footer>
+          <span>creditos</span>
+        </footer>
+
+        <button id="Emitir" type="submit">Emitir</button>
+      </form>
+    </div>
+
+    <script src="/index.js"></script>
+    <script src="/signature.js"></script>
+  </body>
+</html>
