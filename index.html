@@ -11,30 +11,28 @@
       <span>logo</span>
     </header>
 
-    <div id="formDiv">
-      <h1>DADOS DO CHAMADO CEC - ABERTURA</h1>
+    <div id="conteiner">
       <form>
-        <p>
+        <h1>DADOS DO CHAMADO</h1>
+        <div class="divInput">
           <label for="technician">Técnico:</label>
           <input
             type="text"
             name="technician"
             id="technician"
-            placeholder="Escreva seu nome aqui"
             required="required"
           />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="client">Cliente:</label>
           <input
             type="text"
             name="client"
             id="client"
-            placeholder="Escreva o nome do cliente aqui"
             required="required"
           />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="serviceNum">Número do Chamado:</label>
           <input
             type="number"
@@ -43,56 +41,56 @@
             id="serviceNum"
             required="required"
           />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="email">E-mail:</label>
           <input type="email" name="email" id="email" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="date">Data:</label>
           <input type="date" name="date" id="date" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="code">Código:</label>
           <input type="text" name="code" id="code" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="description">Descrição da Peça:</label>
           <input type="text" name="description" id="description" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="reason">Motivo da Troca:</label>
           <input type="text" name="reason" id="reason" />
-        </p>
-        <p>
-          <label for="department">Departmento:</label>
+        </div>
+        <div class="divInput">
+          <label for="department">Departamento:</label>
           <input type="text" name="department" id="department" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="model">Modelo:</label>
           <input type="text" name="model" id="model" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="tag">Etiqueta:</label>
           <input type="number" name="tag" id="tag" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="monoPages">Páginas Mono:</label>
           <input type="number" name="monoPages" id="monoPages" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="colorPages">Páginas Coloridas:</label>
           <input type="number" name="colorPages" id="colorPages" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="totalPages">Total de Páginas:</label>
           <input type="number" name="totalPages" id="totalPages" />
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label for="procedure">Procedimento:</label>
           <textarea name="procedure" id="procedure"></textarea>
-        </p>
-        <p>
+        </div>
+        <div class="divInput">
           <label>Testes Realizados?</label><br />
           <input
             type="radio"
@@ -100,16 +98,16 @@
             id="testsPerformedYes"
             value="yes"
           />
-          <label for="testsPerformedYes">Yes</label><br />
+          <label for="testsPerformedYes">Sim</label><br />
           <input
             type="radio"
             name="testsPerformed"
             id="testsPerformedNo"
             value="no"
           />
-          <label for="testsPerformedNo">No</label>
-        </p>
-        <p>
+          <label for="testsPerformedNo">Não</label>
+        </div>
+        <div class="divInput">
           <label>Cliente acompanhou?</label><br />
           <input
             type="radio"
@@ -117,16 +115,16 @@
             id="clientAccompaniedYes"
             value="yes"
           />
-          <label for="clientAccompaniedYes">Yes</label><br />
+          <label for="clientAccompaniedYes">Sim</label><br />
           <input
             type="radio"
             name="clientAccompanied"
             id="clientAccompaniedNo"
             value="no"
           />
-          <label for="clientAccompaniedNo">No</label>
-        </p>
-        <p>
+          <label for="clientAccompaniedNo">Não</label>
+        </div>
+        <div class="divInput">
           <label>Equipamento apto para uso?</label><br />
           <input
             type="radio"
@@ -134,19 +132,16 @@
             id="equipmentReadyYes"
             value="yes"
           />
-          <label for="equipmentReadyYes">Yes</label><br />
+          <label for="equipmentReadyYes">Sim</label><br />
           <input
             type="radio"
             name="equipmentReady"
             id="equipmentReadyNo"
             value="no"
           />
-          <label for="equipmentReadyNo">No</label>
-        </p>
-
-
-
-        <div id="divSignatureTechnician">
+          <label for="equipmentReadyNo">Não</label>
+        </div>
+        <div class="divInput" id="divSignatureTechnician">
           <label>Assinatura do Técnico:</label><br />
           <canvas
             id="canvasTechnician"
@@ -154,8 +149,7 @@
           ></canvas>
           <button id="clearTechnician" type="button">Limpar</button>
         </div>
-        
-        <div id="divSignatureClient">
+        <div class="divInput" id="divSignatureClient">
           <label>Assinatura do Cliente:</label><br />
           <canvas
             id="canvasClient"
@@ -163,20 +157,14 @@
           ></canvas>
           <button id="clearClient" type="button">Limpar</button>
         </div>
-
-
-
-        
-
-        <button id="Emitir" type="submit">Emitir</button>
+        <button id="generatePdf" type="button">Emitir PDF</button>
       </form>
       
     </div>
     <footer>
       <span>creditos</span>
     </footer>
-
-    <script src="/index.js"></script>
+    <script type="module" src="/index.js"> </script>
     <script src="/signature.js"></script>
   </body>
 </html>
