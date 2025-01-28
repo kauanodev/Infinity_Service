@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity CE</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <span>logo</span>
+    </header>
+
+    <div id="conteiner">
+      <form>
+        <h1>DADOS DO CHAMADO</h1>
+        <div class="divInput">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required="required"
+          />
+          <label for="name">Nome de Usuário</label>
+        </div>
+
+        <div class="divInput">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required="required"
+            />
+            <label for="password">Senha</label>
+          </div>
+
+       
+        <button id="confirmar" type="button">Confirmar</button>
+      </form>
+      
+    </div>
+    <footer>
+      <span>creditos</span>
+    </footer>
+    <script type = "module" src="gerarPDF.js"></script>
+  </body>
+</html>
